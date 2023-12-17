@@ -15,6 +15,10 @@ const usersRoutes = require('/home/yasir/solana/backend/routes/users.js');
 // Use the users routes
 app.use('/api', usersRoutes);
 
+app.get('/', (req, res)=>{
+  res.send('home');
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
